@@ -43,7 +43,7 @@ public class Main {
             Elements elements = document.select("img.g-picture");
             elements.forEach(element -> {
                 try {
-                    URL url = new URL(element.attr("src"));
+                    URL url = new URL(element.absUrl("src"));
                     imageList.add(url);
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
